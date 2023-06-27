@@ -23,48 +23,50 @@ export default function Footer() {
   ]; 
 
   return (
-    <section className="flex justify-between mt-10">
-      <div className="flex flex-col justify-between">
+    <section className="flex md:flex-row flex-col justify-between">
+      <div className="mt-10">
         <p className={`${playfair.className} flex items-center text-3xl font-bold`}>
             <span>
                 <Image className="brightness-0 mr-2" src={logo} alt="" width={40} height={40}/>
             </span>
             sensei
         </p>
-        <p className={`text-md font-medium max-w-[250px]`}>
+        <p className={`text-md font-medium max-w-[250px] my-2`}>
           Find Your Personal Guide to <span className="underline decoration-accent-1">Mastery</span> and <span className="underline decoration-accent-1">Success</span>!
         </p>
         <p>© 2023 Sensei. All rights reserved.</p>
       </div>
-      <div className="">
-        <p className="text-xl font-bold">Links</p>
-        <ul className="text-md">
-            {links.map((link, index) => (
-            <li key={index} className="">
-                <Link href={link.href} className='transition ease-in-out duration:300 hover:transition hover:ease-in-out hover:duration-300 hover:text-accent-1'>{link.name}</Link>
-            </li>
-            ))}
-        </ul>
-      </div>
-      <div className="">
-        <p className="text-xl font-bold">About Us</p>
-        <ul className="text-md">
-            {aboutUs.map((link, index) => (
-            <li key={index} className="">
-                <Link href={link.href} className='transition ease-in-out duration:300 hover:transition hover:ease-in-out hover:duration-300 hover:text-accent-1'>{link.name}</Link>
-            </li>
-            ))}
-        </ul>
-      </div>
-      <div className="">
-        <p className="text-xl font-bold">Contact Us</p>
-        <ul className="text-md">
-            {contactUs.map((link, index) => (
-            <li key={index} className="">
-                <Link href={link.href} className='transition ease-in-out duration:300 hover:transition hover:ease-in-out hover:duration-300 hover:text-accent-1'>{link.name}</Link>
-            </li>
-            ))}
-        </ul>
+      <div className="flex flex-wrap justify-between">
+        <div className="md:ml-5 mr-5 md:mr-0 mt-10">
+          <p className="text-xl font-bold">Links</p>
+          <ul className="text-md">
+              {links.map((link, index) => (
+              <li key={index} className="">
+                  <Link href={link.href} className='transition ease-in-out duration:300 hover:transition hover:ease-in-out hover:duration-300 hover:text-accent-1'>{link.name}</Link>
+              </li>
+              ))}
+          </ul>
+        </div>
+        <div className="md:mx-5 mr-5 md:mr-0 mt-10">
+          <p className="text-xl font-bold">About Us</p>
+          <ul className="text-md">
+              {aboutUs.map((link, index) => (
+              <li key={index} className="">
+                  <Link href={link.href} className='transition ease-in-out duration:300 hover:transition hover:ease-in-out hover:duration-300 hover:text-accent-1'>{link.name}</Link>
+              </li>
+              ))}
+          </ul>
+        </div>
+        <div className="md:ml-5 mr-5 md:mr-0 mt-10">
+          <p className="text-xl font-bold">Contact Us</p>
+          <ul className="text-md">
+              {contactUs.map((link, index) => (
+              <li key={index} className="">
+                  <Link href={link.href} className='transition ease-in-out duration:300 hover:transition hover:ease-in-out hover:duration-300 hover:text-accent-1'>{link.name}</Link>
+              </li>
+              ))}
+          </ul>
+        </div>
       </div>
     </section>
   )

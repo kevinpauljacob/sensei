@@ -54,18 +54,18 @@ const tutors = [
   },
   {
     name: "Ava Martinez",
-    profile: "Language Tutor (Spanish/French)",
+    profile: "Language Tutor",
     rate: "$30/hour",
     ratings: "4.7/5",
     imgURL: "/assets/tutor_8.png",
   },
-  {
-    name: "Grace Lee",
-    profile: "Science and Biology Tutor",
-    rate: "$35/hour",
-    ratings: "4.7/5",
-    imgURL: "/assets/tutor_9.png",
-  },
+  // {
+  //   name: "Grace Lee",
+  //   profile: "Science and Biology Tutor",
+  //   rate: "$35/hour",
+  //   ratings: "4.7/5",
+  //   imgURL: "/assets/tutor_9.png",
+  // },
 ];
 
 
@@ -73,26 +73,30 @@ export default function TutorCards() {
   return (
     <section>
       <h3 className={`text-3xl font-bold text-center mb-10 ${playfair.className}`}>Meet our <span className="underline decoration-accent-1">tutors</span>?</h3>
-      <div className="grid grid-cols-3 auto-rows-auto">
+      <div className="flex flex-wrap xl:justify-between justify-center">
       {tutors.map((tutor, index) => {
         return (
-          <div key={index} className="relative w-[380px] h-[260px] border border-accent-1 bg-accent-1/0 hover:bg-accent-1/10 hover:border-accent-1 transition ease-in-out duration-500 hover:transition hover:ease-in-out hover:duration-500 rounded-lg p-5 mb-5">
-            <div className="flex justify-between mb-2">
-              <Image className="w-20 h-20 rounded-full" src={tutor.imgURL} alt="Tutor Image" width={100} height={100}/>
-              {/* <div className="bg-accent-1 rounded-full w-min p-10"></div> */}
-              <p className="text-md font-semibold">Rating: <span className="text-lg">{tutor.ratings}</span></p>
+          <div key={index} className="flex flex-col justify-between w-[290px] h-[270px] border border-accent-1 bg-accent-1/0 hover:bg-accent-1/10 hover:border-accent-1 transition ease-in-out duration-500 hover:transition hover:ease-in-out hover:duration-500 rounded-lg mx-2 mb-4 xl:mx-0">
+            <div className="pt-5 px-5">
+              <div className="flex justify-between mb-2">
+                <Image className="w-20 h-20 rounded-full" src={tutor.imgURL} alt="Tutor Image" width={100} height={100}/>
+                {/* <div className="bg-accent-1 rounded-full w-min p-10"></div> */}
+                <p className="text-md font-semibold">Rating: <span className="text-lg">{tutor.ratings}</span></p>
+              </div>
+              <h4 className="text-xl font-bold">{tutor.name}</h4>
+              <p className="text-lg font-medium">{tutor.profile}</p>
             </div>
-            <h4 className="text-xl font-bold">{tutor.name}</h4>
-            <p className="text-lg font-medium">{tutor.profile}</p>
-            <div className="flex justify-between items-end">
-              <p className="text-lg">Hourly Rate</p>
-              <p className="text-2xl">{tutor.rate}</p>
-            </div>
-            <div className="absolute left-0 bottom-0 flex justify-between items-center bg-accent-1/20 text-accent-1text-lg font-bold rounded-b-md w-full px-5 py-2">
-              Hire Tutor 
-              <span className="text-3xl">
-                <HiOutlineArrowLongRight/> 
-              </span>
+            <div>
+              <div className="flex justify-between items-end px-5 pb-1">
+                <p className="text-lg">Hourly Rate</p>
+                <p className="text-2xl">{tutor.rate}</p>
+              </div>
+              <div className="flex justify-between items-center bg-accent-1/20 text-accent-1text-lg font-bold rounded-b-md w-full px-5 py-2">
+                Hire Tutor 
+                <span className="text-3xl">
+                  <HiOutlineArrowLongRight/> 
+                </span>
+              </div>
             </div>
           </div>
         );

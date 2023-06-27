@@ -7,7 +7,7 @@ import Footer from '@/components/layouts/Footer'
 
 export default function Home() {
   return (
-    <main className="py-10">
+    <main className="p-10">
       <Navbar />
       <Carousel />
       <Services />
