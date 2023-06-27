@@ -1,0 +1,6 @@
+{
+	"dependencies": {
+		"react": "*",
+		"react-icons": "^4.10.1"
+	}
+}
