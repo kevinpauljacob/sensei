@@ -5,7 +5,7 @@ import { playfair } from "@/utils/fonts";
 
 export default function Navbar() {
     const links = [
-        { name: 'Explore Tutors', href: '#explore' },
+        { name: 'Explore Tutors', href: '#tutors' },
         { name: 'What We Offer', href: '#services' },
       ]; 
 

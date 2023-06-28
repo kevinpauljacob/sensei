@@ -73,7 +73,7 @@ const tutors = [
 export default function TutorCards() {
   return (
     <section>
-      <h3 className={`text-3xl font-bold text-center mb-10 ${playfair.className}`}>Meet our <span className="underline decoration-accent-1">tutors</span>?</h3>
+      <h3 id="tutors" className={`text-3xl font-bold text-center mb-10 ${playfair.className}`}>Meet our <span className="underline decoration-accent-1">tutors</span>?</h3>
       <div className="flex flex-wrap justify-center">
       {tutors.map((tutor, index) => {
         return (

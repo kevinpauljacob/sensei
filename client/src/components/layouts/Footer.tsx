@@ -23,7 +23,7 @@ export default function Footer() {
   ]; 
 
   return (
-    <section className="flex md:flex-row flex-col justify-between">
+    <section className="flex md:flex-row flex-col justify-between mt-20">
       <div className="mt-10">
         <p className={`${playfair.className} flex items-center text-3xl font-bold`}>
             <span>
